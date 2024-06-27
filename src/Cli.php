@@ -6,7 +6,7 @@ namespace Phico\Cli;
 
 abstract class Cli
 {
-    protected string $help = 'Usage: pico command method [args...]';
+    protected string $help = 'Usage: phico command method [args...]';
 
 
     /**
@@ -23,7 +23,7 @@ abstract class Cli
     /**
      * Displays the contents of the help property.
      */
-    public function help(): void
+    public function help(Args $args): void
     {
         $this->write($this->help . "\n");
     }
