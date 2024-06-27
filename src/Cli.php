@@ -17,7 +17,7 @@ abstract class Cli
     public function __call(string $method, array $args = [])
     {
         $this->warning(sprintf("Unknown command '%s'\n", $method));
-        $this->help();
+        $this->help(...$args);
         exit(1);
     }
     /**
