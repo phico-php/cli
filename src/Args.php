@@ -45,6 +45,11 @@ class Args
             }
         }
     }
+    // returns an array of all arguments
+    public function all(): array
+    {
+        return $this->args ?? [];
+    }
     // check that a named flag was provided
     public function has(string $str): bool
     {
