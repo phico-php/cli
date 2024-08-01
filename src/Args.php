@@ -22,8 +22,9 @@ class Args
                 $str = substr($str, 2);
                 if (str_contains($str, '=')) {
                     $parts = explode('=', $str);
-                    $this->long_flags[] = trim($parts[0]);
-                    $this->values[trim($parts[0])] = trim($parts[1]);
+                    $k = trim(array_shift($parts));
+                    $this->long_flags[] = $k;
+                    $this->values[$k] = implode('=', $parts);
                 } else {
                     $this->long_flags[] = $str;
                 }
