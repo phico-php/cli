@@ -122,12 +122,12 @@ abstract class Cli
      * @param string $title The title string
      * @return void
      */
-    protected function title(string $str): void
+    protected function title(string $title): void
     {
         echo sprintf(
             "\n%s\n%s\n\n",
-            $str,
-            str_repeat('=', strlen($str))
+            $title,
+            str_repeat('=', strlen($title))
         );
     }
     /**
